@@ -1,0 +1,27 @@
+<head>
+  <title>ion-checkbox-component-test</title>
+  <meta name="viewport" content="user-scalable=0, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi">
+  <link rel="stylesheet" href="http://code.ionicframework.com/1.0.0-beta.13/css/ionic.css">
+</head>
+
+<body>
+  {{> app}}
+</body>
+
+<template name="app">
+  <div class="bar bar-stable">
+    <h1 class="title">Settings</h1>
+  </div>
+  <div class="content has-header">
+    <div class="list">
+      {{#ionCheckbox model=checkboxModel name="pushNotifications" disabled=checkboxDisabled}}
+        Receive Push Notifications?
+      {{/ionCheckbox}}
+    </div>
+
+    <div class="card padding">
+      <button class="button button-light button-small">{{verb}} Checkbox</button>
+      <p>Push notifications are: <strong>{{status}}</strong>. You've clicked <strong>{{numClicks}} times</strong>.</p>
+    </div>
+  </div>
+</template>
